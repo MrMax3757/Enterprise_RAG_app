@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: enterprise-rag-app
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GROQ_MODEL
+        value: qwen/qwen3.8-27b
+      - key: QDRANT_API_KEY
+        sync: false
+      - key: QDRANT_CLUSTER_ENDPOINT
+        sync: false
+      - key: QDRANT_COLLECTION
+        value: Enterprise_RAG
+      - key: BACKEND_URL
+        value: http://127.0.0.1:8000
+      - key: LOGFIRE_TOKEN
+        sync: false

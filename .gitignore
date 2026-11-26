@@ -1,0 +1,27 @@
+# Environments and Virtualenvs
+.venv/
+venv/
+env/
+ENV/
+*.env
+!.env.example
+
+# Bytecode and cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Observability credentials & logs
+.logfire/
+*.log
+
+# Local data & temp files
+processed_data/
+DATA/noisy_data/
+*.tmp
+.DS_Store
+
+# IDE and editor settings
+.vscode/
+.idea/
